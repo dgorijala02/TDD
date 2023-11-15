@@ -1,5 +1,4 @@
 version: 2.1
-
 jobs:
     build_and_push:
         docker:
@@ -30,4 +29,4 @@ workflows:
             - build_and_push:
                 filters:
                     branches:
-                        only: main
+                        only: Divya
