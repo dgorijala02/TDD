@@ -8,9 +8,6 @@ WORKDIR /
 COPY sparse_recommender.py .
 COPY test_sparse_recommender.py .
 
-# Install app dependencies
-RUN pip install pytest
-
 # Copy the local source code to the container
 COPY . .
 
