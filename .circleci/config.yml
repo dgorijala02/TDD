@@ -9,7 +9,7 @@ jobs:
                 version: 19.03.13
             - run:
                 name: install pytest dependency
-                command: pip insatll pytest
+                command: pip install pytest
             - run:
                 name: Run pytest file
                 command: pytest test_sparse_recommender.py
