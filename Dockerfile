@@ -5,8 +5,8 @@ FROM node:14
 WORKDIR /
 
 # Copy package.json and package-lock.json to the working directory
-COPY sparse_recommender.py
-COPY test_sparse_recommender.py
+COPY sparse_recommender.py .
+COPY test_sparse_recommender.py .
 
 # Install app dependencies
 RUN pip install pytest
