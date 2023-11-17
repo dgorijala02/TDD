@@ -1,15 +1,8 @@
-# Use an official Node.js runtime as a base image
-FROM node:14
-
-# Set the working directory in the container
+FROM python:3.8-slim
+# Set working directory
 WORKDIR /
-
-# Copy package.json and package-lock.json to the working directory
+# Copy
 COPY sparse_recommender.py .
-COPY test_sparse_recommender.py .
-
-# Copy the local source code to the container
-COPY . .
-
-# Define the command to run your application
-CMD ["pytest", "test_sparse_recommender.py"]
+COPY test.py .
+# run
+CMD [ "pytest", "./test.py"
