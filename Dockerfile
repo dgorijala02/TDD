@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Install dependencies
-RUN pip install -r requirements.txt
+RUN pip install -r pytest
 
 # Define the command to run your application (tests in this case)
 CMD ["pytest", "test_sparse_recommender.py"]
