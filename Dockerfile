@@ -5,4 +5,4 @@ WORKDIR /
 COPY sparse_recommender.py .
 COPY test.py .
 # run
-CMD [ "pytest", "./test.py"
+CMD [ "pytest", "test_sparse_recommender.py"
