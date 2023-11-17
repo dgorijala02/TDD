@@ -17,6 +17,9 @@ jobs:
                 name: Docker build
                 command: docker build -t $DOCKERHUB_USERNAME/myapp:${CIRCLE_SHA1} .
             - run:
+                name: Docker run
+                command: docker run $DOCKERHUB_USERNAME/myapp:${CIRCLE_SHA1} .
+            - run:
                 name: Authenticate with Docker Hub
                 command: echo "$DOCKERHUB_PASS" | docker login --username $DOCKERHUB_USERNAME --password-stdin
             - run:
