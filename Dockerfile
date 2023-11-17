@@ -3,6 +3,6 @@ FROM python:3.8-slim
 WORKDIR /
 # Copy
 COPY sparse_recommender.py .
-COPY test.py .
+COPY test_sparse_recommender.py .
 # run
 CMD [ "pytest", "test_sparse_recommender.py"
