@@ -8,10 +8,10 @@ jobs:
             - setup_remote_docker:
                 version: 19.03.13
             - run:
-                name: install pytest dependency
+                name: Install dependencies
                 command: pip install pytest
             - run:
-                name: Run pytest file
+                name: Run Testcases
                 command: pytest test_sparse_recommender.py
             - run:
                 name: Docker build
