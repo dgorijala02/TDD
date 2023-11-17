@@ -17,6 +17,9 @@ jobs:
                 name: Docker build
                 command: docker build -t $DOCKERHUB_USERNAME/myapp:${CIRCLE_SHA1} .
             - run:
+                name: Run tests in Docker container
+                command: docker run $DOCKERHUB_USERNAME/myapp:${CIRCLE_SHA1} pytest test_sparse_recommender.py
+            - run:
                 name: Authenticate with Docker Hub
                 command: echo "$DOCKERHUB_PASS" | docker login --username $DOCKERHUB_USERNAME --password-stdin
             - run:
